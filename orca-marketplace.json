@@ -1,0 +1,16 @@
+{
+  "name": "Reily Orca Plugins",
+  "owner": "zhigang1992",
+  "plugins": [
+    {
+      "id": "reily.orca-native-push",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/zhigang1992/orca-native-push.git",
+        "ref": "v1.0.0"
+      },
+      "description": "Sends agent needs-input / finished alerts to Orca Native through a Cloudflare push relay so the phone does not need to stay connected.",
+      "categories": ["notifications"]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        padding: 12px;
+        font-family: system-ui, sans-serif;
+        font-size: 13px;
+        color: var(--foreground, #ddd);
+        background: var(--background, transparent);
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0 0 8px;
+      }
+      p {
+        margin: 0 0 10px;
+        color: var(--muted-foreground, #999);
+        line-height: 1.4;
+      }
+      ol {
+        margin: 0 0 10px;
+        padding-left: 1.2em;
+        color: var(--muted-foreground, #999);
+        line-height: 1.5;
+      }
+      code {
+        font-family: ui-monospace, monospace;
+        font-size: 11px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Orca Native Push</h1>
+    <p>
+      Sends agent alerts to Orca Native through a Cloudflare relay, so the phone still gets them when
+      the app is killed.
+    </p>
+    <ol>
+      <li>Command Palette → <code>Native Push: Show credentials</code></li>
+      <li>Open the link from the desktop notification on the phone (or paste it in Orca Native Settings)</li>
+      <li>Optional: <code>Native Push: Send test alert</code></li>
+    </ol>
+    <p>
+      Debug builds use the <code>orcanative-dev://</code> scheme; re-run Show credentials and change
+      the scheme in the link, or paste server id + secret manually.
+    </p>
+  </body>
+</html>

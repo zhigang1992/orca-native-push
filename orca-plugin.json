@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "id": "orca-native-push",
+  "publisher": "reily",
+  "name": "Orca Native Push",
+  "version": "1.0.0",
+  "description": "Sends agent needs-input / finished alerts to Orca Native through a Cloudflare push relay so the phone does not need to stay connected.",
+  "engines": { "orca": ">=1.4.0" },
+  "pluginApi": 1,
+  "main": "main.mjs",
+  "contributes": {
+    "panels": [
+      {
+        "id": "push",
+        "title": "Native Push",
+        "icon": "bell",
+        "entry": "panel.html"
+      }
+    ],
+    "commands": [
+      { "id": "push.credentials", "title": "Native Push: Show credentials" },
+      { "id": "push.test", "title": "Native Push: Send test alert" }
+    ],
+    "events": [{ "on": "agent.status.changed" }, { "on": "worktree.created" }, { "on": "worktree.removed" }]
+  },
+  "capabilities": [
+    { "kind": "storage" },
+    { "kind": "events:subscribe" },
+    { "kind": "settings:own" },
+    { "kind": "notifications:show" }
+  ]
+}
